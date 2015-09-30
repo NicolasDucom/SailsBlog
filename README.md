@@ -1,2 +1,3 @@
 # SailsBlog
-Testing out SailsJs with a simple blog
+
+a [Sails](http://sailsjs.org) application
