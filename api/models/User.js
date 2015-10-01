@@ -14,10 +14,18 @@ module.exports = {
           required: true,
           unique: true
       },
+      name: {
+          type:'string',
+          required: true
+      },
       password: {
           type:'string',
           minLength: 6,
           required: true
+      },
+      posts:{
+          collection: 'post',
+          via: 'user'
       },
       toJSON: function(){
           var obj = this.toObject();

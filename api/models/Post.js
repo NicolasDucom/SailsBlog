@@ -9,14 +9,13 @@ module.exports = {
 autoCreatedAt: true,
 autoUpdatedAt: true,
   attributes: {
-
-      username: {
-          type: 'string'
+      user: {
+          model:'user'
       },
       content: {
           type: 'string',
           required: true
       }
-  }
+  },
 };
 
