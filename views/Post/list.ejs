@@ -1,0 +1,13 @@
+/**
+ * Created by Nicolas on 10/6/2015.
+ */
+<% for (post in posts) { %>
+<div class="post">
+    <h1>Posted by Nicolas</h1>
+    <p><%= posts[post].content %></p>
+    <div>
+        <span class="badge">Posted <%= posts[post].createdAt %></span>
+    </div>
+    <hr>
+</div>
+<% } %>

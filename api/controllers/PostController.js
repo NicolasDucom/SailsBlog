@@ -6,7 +6,7 @@
  */
 var sails = require('sails');
 module.exports = {
-    post: function(req,res){
+    postAction: function(req,res){
         postContent = req.param("content");
         postUser = req.user;
         Post.create({content:postContent,user:postUser}).exec(function (err,created){
@@ -16,6 +16,13 @@ module.exports = {
                 res.send(201);
             }
         });
-    }
-};
+    },
 
+    getAction: function (req, res) {
+        Post.find().exec(function(err, data) {
+            if (err) res.send(500);
+            res.view('Post/list', {posts: data, layout: null});
+        });
+    }
+
+};

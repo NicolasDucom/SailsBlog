@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="text-center">
+                <h1>Blog Posts</h1>
+                <hr/>
+            </div>
+            <div id="posts">
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <form method="post" action="/post" class="form-horizontal" role="form" id="postForm">
+                        <textarea placeholder="Post Something !" class="row-fluid" name="content" style="width:100%"></textarea>
+                        <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+</div>
+
+<% block('localScripts', '<script src="/js/posts.js"></script>') %>

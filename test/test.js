@@ -7,3 +7,7 @@ describe('String#split', function(){
         assert(Array.isArray('a,b,c'.split(',')));
     });
 })
+
+$( document ).ready(function() {
+
+});

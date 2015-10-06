@@ -16,6 +16,6 @@ autoUpdatedAt: true,
           type: 'string',
           required: true
       }
-  },
+  }
 };
 

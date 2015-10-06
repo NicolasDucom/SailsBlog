@@ -50,11 +50,13 @@ module.exports.routes = {
         view: 'login'
     },
 
-    'get /posts': {
-        view: 'posts'
-    },
+    'get /post': 'PostController.getAction',
 
-    'post /post': 'PostController.post',
+    'post /post': 'PostController.postAction',
+
+    'get /posts': {
+        view: 'Post/posts'
+    },
 
     'post /login': 'AuthController.login',
 
