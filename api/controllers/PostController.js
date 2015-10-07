@@ -19,7 +19,7 @@ module.exports = {
     },
 
     getAction: function (req, res) {
-        Post.find().exec(function(err, data) {
+        Post.find().populate('user').exec(function(err, data) {
             if (err) res.send(500);
             res.view('Post/list', {posts: data, layout: null});
         });

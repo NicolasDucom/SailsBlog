@@ -27,6 +27,3 @@ $( "#myButton" ).click(function() {
             ]
     });
 });
-/**
- * Created by Nicolas on 10/1/2015.
- */

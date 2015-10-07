@@ -8,7 +8,6 @@ $( document ).ready(function() {
             type: "GET",
             success:function(data)
             {
-                console.log(data);
                 $("#posts").append(data);
             }
         });
@@ -25,6 +24,24 @@ $("#postForm").submit(function(e)
             data : postData,
             success:function(data)
             {
+
+            }
+        });
+    e.preventDefault();
+});
+
+$("#loginForm").submit(function(e)
+{
+    var postData = $(this).serializeArray();
+    var formURL = $(this).attr("action");
+    $.ajax(
+        {
+            url : formURL,
+            type: "POST",
+            data : postData,
+            success:function(data)
+            {
+                $('#login-modal').modal('hide');
 
             }
         });

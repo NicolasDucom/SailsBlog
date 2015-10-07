@@ -17,9 +17,37 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            <div class="text-right">
+                <% if(req.user) { %>
+                Hello <%=req.user.name%>
+                <a href="/logout">
+                    <button type="button" class="btn btn-warning">Logout</button>
+                </a>
+                <% } else { %>
+                <a href="#" data-toggle="modal" data-target="#login-modal">
+                    <button type="button" class="btn btn-primary">Login</button>
+                </a>
+                <% } %>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1>Login to Your Account</h1><br>
+                <form accept-charset="UTF-8" role="form" method="post" action="/login" id="loginForm">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                </form>
+                <div class="login-help">
+                    <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</div>
 
-<% block('localScripts', '<script src="/js/posts.js"></script>') %>
+
