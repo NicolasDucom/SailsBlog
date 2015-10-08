@@ -8,7 +8,22 @@ $( document ).ready(function() {
             type: "GET",
             success:function(data)
             {
-                $("#posts").append(data);
+                $("#posts").html(data);
+            }
+        });
+});
+
+io.socket.on('post', function (data) {
+    $.ajax(
+        {
+            url : "/post",
+            type: "GET",
+            data: {
+              id: data.id
+            },
+            success:function(data)
+            {
+                $("#posts").prepend(data);
             }
         });
 });
@@ -24,7 +39,6 @@ $("#postForm").submit(function(e)
             data : postData,
             success:function(data)
             {
-
             }
         });
     e.preventDefault();
@@ -42,9 +56,7 @@ $("#loginForm").submit(function(e)
             success:function(data)
             {
                 $('#login-modal').modal('hide');
-
             }
         });
     e.preventDefault();
 });
-

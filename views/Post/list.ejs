@@ -3,7 +3,7 @@
     <h1>Posted by <%= posts[post].user.name %></h1>
     <p><%= posts[post].content %></p>
     <div>
-        <span class="badge">Posted <%= posts[post].createdAt %></span>
+        <span class="badge">Posted <%- moment(posts[post].createdAt).format('MMMM Do YYYY, h:mm:ss a') %></span>
     </div>
     <hr>
 </div>

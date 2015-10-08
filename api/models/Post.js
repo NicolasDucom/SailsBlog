@@ -10,7 +10,8 @@ autoCreatedAt: true,
 autoUpdatedAt: true,
   attributes: {
       user: {
-          model:'user'
+          model:'user',
+          required: true
       },
       content: {
           type: 'string',
