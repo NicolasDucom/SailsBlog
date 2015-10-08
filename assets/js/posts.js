@@ -4,7 +4,7 @@
 $( document ).ready(function() {
     $.ajax(
         {
-            url : "/post",
+            url : "/postsList",
             type: "GET",
             success:function(data)
             {
@@ -16,7 +16,7 @@ $( document ).ready(function() {
 io.socket.on('post', function (data) {
     $.ajax(
         {
-            url : "/post",
+            url : "/postsList",
             type: "GET",
             data: {
               id: data.id

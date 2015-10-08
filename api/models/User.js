@@ -40,7 +40,7 @@ module.exports = {
                     console.log(err);
                 } else {
                     user.password = hash;
-                    cb();
+                    cb(null, user);
                 }
             });
         });
