@@ -1,6 +1,5 @@
 language: node_js
 node_js:
   - "0.10.32"
-env:
-- SAILS_DATABASE_USER:travis
-- SAILS_DATABASE_NAME:sailsjs
+before_script:
+  - mysql -e 'CREATE DATABASE sailsblog_test'
