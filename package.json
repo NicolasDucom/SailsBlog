@@ -45,6 +45,7 @@
   "license": "",
   "devDependencies": {
     "assert": "^1.3.0",
+    "barrels": "^1.5.0",
     "grunt-mocha-test": "^0.12.7",
     "install": "^0.1.8",
     "sinon": "^1.17.1",
